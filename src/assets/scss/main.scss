@@ -1,12 +1,13 @@
 @import "variables";
+@import "~bootstrap/scss/bootstrap";
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;500;600&display=swap");
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     // text-align: center;
-    font-family: 'prompt';
+    font-family: "prompt";
 }
 body {
     background: $primary-color;
@@ -15,4 +16,6 @@ body {
     max-width: 1300px;
     margin: auto;
 }
-
+a {
+    text-decoration: none;
+}
