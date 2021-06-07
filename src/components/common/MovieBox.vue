@@ -21,6 +21,7 @@
 @media (max-width: 550px) {
   .movie-box{
     width: 350px;
+    height: 250px;
     margin: auto;
     margin-bottom: 30px;
   }

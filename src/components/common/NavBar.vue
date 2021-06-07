@@ -6,7 +6,7 @@
       </div>
 
       <ul class="menu">
-        <li><a href="">HOME</a></li>
+        <li><router-link to="/">HOME</router-link></li>
         <li><a href="">RATING</a></li>
         <li><router-link to="/watch">WATCH</router-link></li>
       </ul>
@@ -27,7 +27,7 @@ nav .max-width {
   align-items: center;
   justify-content: space-between;
 }
-nav .logo a {
+nav .logo a{
   font-weight: 500;
   font-size: 50px;
   color: #fec926;

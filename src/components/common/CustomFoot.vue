@@ -1,10 +1,10 @@
 <template>
   <footer>
     <div class="logo">
-      <a href=""><img src="~@/assets/img/fb.png" /></a>
-      <a href=""><img src="~@/assets/img/ig.png" /></a>
-      <a href=""><img src="~@/assets/img/tw.png" /></a>
-      <a href=""><img src="~@/assets/img/yo.png" /></a>
+      <a href=""><i class='bx bxl-facebook'></i></a>
+      <a href=""><i class='bx bxl-instagram' ></i></a>
+      <a href=""><i class='bx bxl-twitter' ></i></a>
+      <a href=""><i class='bx bxl-youtube' ></i></a>
       <!-- <i class='bx bxl-facebook'></i> -->
     </div>
 
@@ -26,13 +26,14 @@ footer .cr {
   display: flex;
   justify-content: center;
 }
-footer .logo img {
-  width: 40px;
+footer .logo i{
+  font-size: 40px;
   margin: 15px;
   padding-top: 25px;
   transition: 0.3s ease;
+  color: #363636;
 }
-footer .logo img:hover {
+footer .logo i:hover {
   transform: scale(1.1);
 }
 @media (max-width: 550px) {
@@ -41,6 +42,10 @@ footer .logo img:hover {
   }
   footer p {
     color: #fec926;
+  }
+  footer .logo i{
+    color: #fec926;
+    font-size: 30px;
   }
 }
 
