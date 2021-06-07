@@ -5,7 +5,7 @@
       <a href=""><img src="~@/assets/img/ig.png" /></a>
       <a href=""><img src="~@/assets/img/tw.png" /></a>
       <a href=""><img src="~@/assets/img/yo.png" /></a>
-      <i class='bx bxl-facebook'></i>
+      <!-- <i class='bx bxl-facebook'></i> -->
     </div>
 
     <div class="cr">

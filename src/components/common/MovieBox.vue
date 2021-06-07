@@ -18,4 +18,11 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+@media (max-width: 550px) {
+  .movie-box{
+    width: 350px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
 </style>

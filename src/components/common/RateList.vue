@@ -6,8 +6,8 @@
       </div>
 
       <div class="list-row">
-        <div v-for="(li, index) in list" :key="index" class="col-12 col-sm-6">
-          <a href="#" class="box">{{ li }}</a>
+        <div v-for="(item, index) in list" :key="index" class="col-12 col-sm-6">
+          <a href="#" class="box">{{ item }}</a>
         </div>
       </div>
     </div>
@@ -62,6 +62,9 @@ h3 {
   }
   .rating {
     background: #fec926;
+  }
+  h3{
+    color: #363636;
   }
 }
 @media (max-width: 919px) {
