@@ -4,31 +4,40 @@
       <img src="~@/assets/img/2.jpeg" alt="" />
     </div>
     <div class="container">
-      <h1>{{ movieInfo.title }}</h1>
-      <p>{{ movieInfo.intro }}</p>
+      <h1>{{ mocking.original_title }}</h1>
+      <p>{{ mocking.overview }}</p>
 
-      <h1>Story</h1>
-      <p>{{movieInfo.detail}}</p>
+      <h1>Release Date</h1>
+      <p>{{ mocking.release_date }}</p>
+
+      <h1>Type</h1>
+      <p>
+        {{ mocking.genres[0].name }}, {{ mocking.genres[1].name }},
+        {{ mocking.genres[2].name }}
+      </p>
+
+      <h1>Production Countries</h1>
+      <p>{{ mocking.production_countries[0].name}}</p>
+
+      <h1>Companies</h1>
+      <p>
+        {{ mocking.production_companies[0].name }},
+        {{ mocking.production_companies[1].name }},
+      </p>
 
       <h1>Score</h1>
-      <p>{{ movieInfo.score }}</p>
-
-      <h1>Reviews</h1>
-      <p>{{ movieInfo.review }}</p>
-
-      <h1>Writer</h1>
-      <p>{{ movieInfo.writer }}</p>
-
-      <h1>Director</h1>
-      <p>{{ movieInfo.director }}</p>
+      <p>{{ mocking.vote_average }} / 10</p>
     </div>
   </section>
 </template>
 
 <script>
+import movieMock from "@/data/movie-mock";
+
 export default {
   data() {
     return {
+      mocking: movieMock,
       movieInfo: {
         title: "Percy Jackson",
         intro: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
@@ -63,6 +72,10 @@ h1,
 p {
   color: #fec926;
   padding: 20px;
+  font-weight: 400;
+}
+p{
+  font-size: 20px;
 }
 img {
   margin-bottom: 20px;
@@ -76,6 +89,9 @@ img {
   p {
     color: #363636;
     padding: 10px;
+  }
+  p{
+    font-weight: 15px;
   }
   h1 {
     font-size: 25px;

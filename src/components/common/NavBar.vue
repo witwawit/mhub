@@ -101,7 +101,8 @@
   color: #fec926;
   margin: 20px;
 }
-.nav-link:hover{
+.nav-link:hover,
+.nav-link:focus{
   color: #fec926;
 }
 #navbarSupportedContent{

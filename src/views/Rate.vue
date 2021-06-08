@@ -23,8 +23,7 @@ export default {
   },
   computed: {
     queryString() {
-			// /rate?link=
-			if (this.$route.query.by) {
+			if (this.$route.query.by) { // $route.query เป็นการฟิกค่าเพื่อนำไปไว้บนลิ้ง query ส่วน by เปลี่ยนได้ 
 				return this.$route.query.by;
 			}
       return this.ratingList[0].key; //กำหนดค่า default เริ่มต้น ในตำแหน่ง ratinglist ที่ 0 คือ Top Rate
