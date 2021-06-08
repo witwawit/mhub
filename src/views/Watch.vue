@@ -38,26 +38,26 @@ export default {
   data() {
     return {
       mocking: movieMock,
-      movieInfo: {
-        title: "Percy Jackson",
-        intro: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-        consequatur nam vero quibusdam quos reprehenderit, maxime, hic delectus
-        repudiandae nesciunt possimus vitae quam ducimus, similique eaque sed
-        maiores blanditiis quidem atque natus porro aut. Distinctio quo veniam,
-        repudiandae facilis laborum beatae est ut voluptate corrupti debitis
-        unde, ducimus nemo quis similique. Ducimus adipisci perferendis
-        aspernatur itaque unde nostrum explicabo magnam nihil exercitationem
-        voluptatum repellat doloremque, magni eos eius, repudiandae quidem aut
-        provident voluptates, debitis dolore soluta beatae. Sequi ipsum eaque
-        quis rem hic voluptates iste laboriosam quibusdam, veniam consequatur
-        praesentium, cumque doloribus minus magni amet aperiam cum dignissimos
-        aspernatur? Atque.`,
-        detail: "Detail",
-        review: "Reviews",
-        score: "Score",
-        writer: "Writer",
-        director: "Director",
-      },
+      // movieInfo: {
+      //   title: "Percy Jackson",
+      //   intro: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+      //   consequatur nam vero quibusdam quos reprehenderit, maxime, hic delectus
+      //   repudiandae nesciunt possimus vitae quam ducimus, similique eaque sed
+      //   maiores blanditiis quidem atque natus porro aut. Distinctio quo veniam,
+      //   repudiandae facilis laborum beatae est ut voluptate corrupti debitis
+      //   unde, ducimus nemo quis similique. Ducimus adipisci perferendis
+      //   aspernatur itaque unde nostrum explicabo magnam nihil exercitationem
+      //   voluptatum repellat doloremque, magni eos eius, repudiandae quidem aut
+      //   provident voluptates, debitis dolore soluta beatae. Sequi ipsum eaque
+      //   quis rem hic voluptates iste laboriosam quibusdam, veniam consequatur
+      //   praesentium, cumque doloribus minus magni amet aperiam cum dignissimos
+      //   aspernatur? Atque.`,
+      //   detail: "Detail",
+      //   review: "Reviews",
+      //   score: "Score",
+      //   writer: "Writer",
+      //   director: "Director",
+      // },
     };
   },
 };

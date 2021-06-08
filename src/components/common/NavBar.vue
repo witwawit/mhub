@@ -100,6 +100,11 @@
 .nav-link {
   color: #fec926;
   margin: 20px;
+  transition: .3s ease;
+}
+.nav-link:hover{
+  font-weight: 600;
+  transform: scale(1.1);
 }
 .nav-link:hover,
 .nav-link:focus{

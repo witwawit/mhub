@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import movieMock from "@/data/movie-mock";
+
 export default {
   props: {
     title: {
@@ -26,6 +28,7 @@ export default {
   },
   data() {
     return {
+      mocking: movieMock,
       list: [
         "Percy Jackson",
         "Pirates of the Carribbean",
