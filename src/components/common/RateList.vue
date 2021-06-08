@@ -7,7 +7,16 @@
 
       <div class="list-row">
         <div v-for="(item, index) in list" :key="index" class="col-12 col-sm-6">
-          <a href="#" class="box">{{ item }}</a>
+          <router-link
+            :to="{
+              name: 'rate',
+              query: {
+                by: item.query,
+              },
+            }"
+            class="box"
+            >{{ item.text }}</router-link
+          >
         </div>
       </div>
     </div>
@@ -18,7 +27,13 @@
 export default {
   data() {
     return {
-      list: ["top rates", "most recent", "most view", "mostlike"],
+      // list: ["top rates", "most recent", "most view", "mostlike"],
+      list: [
+        { query: "top", text: "Top Rates" },
+        { query: "recent", text: "Most Recent" },
+        { query: "view", text: "Most View" },
+        { query: "like", text: "Most Like" },
+      ],
     };
   },
 };
@@ -63,7 +78,7 @@ h3 {
   .rating {
     background: #fec926;
   }
-  h3{
+  h3 {
     color: #363636;
   }
 }

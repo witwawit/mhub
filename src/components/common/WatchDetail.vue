@@ -1,7 +1,7 @@
 <template>
   <section class="bigpic">
     <div class="pic">
-      <img src="~@/assets/img/1.jpeg" alt="" />
+      <img src="~@/assets/img/2.jpeg" alt="" />
     </div>
     <div class="container">
       <h1>Percy Jackson</h1>

@@ -7,13 +7,16 @@ import Rate from '@/views/Rate'
 Vue.use(VueRouter)
 
 const routes = [
-	{ path: '/', name: Home, component: Home },
-	{ path: '/watch', name: Watch, component: Watch },
-	{ path: '/rate' , name: Rate, component: Rate}
+	{ path: '/', name: "home", component: Home },
+	{ path: '/watch', name: "watch", component: Watch },
+	{ path: '/rate', name: "rate", component: Rate }
 ]
 
 const router = new VueRouter({
 	mode: "history",
-	routes
+	routes,
+	scrollBehavior() {
+		return { x: 0, y: 0 }
+	}
 })
 export default router;
