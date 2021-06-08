@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg p-0">
     <div class="container-fluid">
       <a class="navbar-brand" href="/"><span>M</span>HUB</a>
       <button
@@ -19,9 +19,6 @@
             <router-link class="nav-link active" aria-current="page" to="/"
               >HOME</router-link
             >
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/watch">WATCH</router-link>
           </li>
           <li class="nav-item dropdown">
             <router-link
@@ -104,6 +101,9 @@
   color: #fec926;
   margin: 20px;
 }
+.nav-link:hover{
+  color: #fec926;
+}
 #navbarSupportedContent{
   margin-left: 40%;
 }
@@ -118,6 +118,9 @@
   .navbar-brand:hover {
     color: #363636;
   }
+  .nav-link:hover{
+  color: #363636;
+}
 }
 /* nav {
   background: #363636;

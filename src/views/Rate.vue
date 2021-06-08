@@ -1,22 +1,16 @@
 <template>
   <div>
-    <!-- navbar -->
-    <nav-bar />
     <!-- <div>{{ topicTitle }}</div> -->
     <!-- Topic @ Box -->
     <rate-topic :title="topicTitle"/>
-    <!-- footer -->
-    <custom-foot />
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/common/NavBar.vue";
-import CustomFoot from "@/components/common/CustomFoot.vue";
 import RateTopic from "@/components/common/RateTopic.vue";
 
 export default {
-  components: { NavBar, CustomFoot, RateTopic },
+  components: { RateTopic },
   data() {
     return {
       ratingList: [

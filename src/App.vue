@@ -1,11 +1,19 @@
 <template>
-  <router-view />
+  <div>
+    <nav-bar />
+    <router-view />
+    <custom-foot />
+  </div>
 </template>
 
 <script>
+import NavBar from "@/components/common/NavBar";
+import CustomFoot from "@/components/common/CustomFoot";
+
 export default {
-  name: 'App'
-}
+  components: { NavBar, CustomFoot },
+  name: "App",
+};
 </script>
 
 <style lang="scss">

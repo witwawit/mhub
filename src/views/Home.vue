@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- navbar -->
-    <nav-bar />
 
     <!-- corousel test -->
     <new-corou />
@@ -28,20 +26,16 @@
     <!-- rating -->
     <rate-list></rate-list>
 
-    <!-- footer -->
-    <custom-foot />
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/common/NavBar";
-import CustomFoot from "@/components/common/CustomFoot";
 import MovieBox from "@/components/common/MovieBox";
 import RateList from "@/components/common/RateList";
 import NewCorou from "@/components/common/NewCorou.vue";
 
 export default {
-  components: { NavBar, CustomFoot, MovieBox, RateList, NewCorou},
+  components: { MovieBox, RateList, NewCorou},
   setup() {},
 };
 </script>
