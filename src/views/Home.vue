@@ -10,13 +10,13 @@
         </div>
         <div class="d-flex flex-wrap justify-content-center">
           <div
-            v-for="item in trends.results"
+            v-for="item in posterList"
             :key="`l-${item}`"
             class="col-12 col-sm-6 col-lg-3"
           >
-            <movie-box :poster="item.poster_path"></movie-box>
+            <movie-box :poster="item"></movie-box>
+            <!-- <movie-box poster="/M7SUK85sKjaStg4TKhlAVyGlz3.jpg"></movie-box> -->
           </div>
-
         </div>
 
         <div class="d-grid gap-2"></div>
@@ -43,6 +43,21 @@ export default {
     return {
       trends: trendList,
     };
+  },
+  computed: {
+    posterList() {
+      const filter = this.trends.results.filter((element, index) => index < 8);
+      const mapping = filter.map((element) => {
+        // console.log(element.poster_path, index);
+        return element.poster_path;
+      });
+
+      // const mapping2 = filter.map((element) => {
+      //   return displayImage(element.poster_path);
+      // });
+      // console.log(mapping,mapping2);
+      return mapping;
+    },
   },
   methods: {
     displayImage,
