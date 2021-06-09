@@ -1,11 +1,29 @@
 <template>
-  <div class="movie-box"><a href="#"></a></div>
+  <div class="movie-box"><a href="#"><img :src="displayImage(poster)" alt=""></a></div>
 </template>
 
+<script>
+import * as ImageHelper from "@/helper/image.helper"
+
+export default {
+  props: {
+    poster: {type: String}
+  },
+  methods: {
+    displayImage: ImageHelper.displayImage
+  }
+}
+</script>
+
 <style scoped>
+img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .movie-box {
+  background: coral;
   height: 360px;
-  background: #eed589;
   margin: 15px;
   transition: 0.3s ease;
   /* scss */
@@ -14,7 +32,7 @@
     transform: scale(1.1);
   } */
 }
-.movie-box:hover {
+.movie-box:hover{
   cursor: pointer;
   transform: scale(1.1);
 }

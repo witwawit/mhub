@@ -1,7 +1,7 @@
 <template>
   <section class="bigpic">
     <div class="pic">
-      <img src="~@/assets/img/2.jpeg" alt="" />
+      <img :src="displayImage(mocking.backdrop_path)" alt="" />
     </div>
     <div class="container">
       <h1>{{ mocking.original_title }}</h1>
@@ -12,17 +12,17 @@
 
       <h1>Type</h1>
       <p>
-        {{ mocking.genres[0].name }}, {{ mocking.genres[1].name }},
-        {{ mocking.genres[2].name }}
+        {{ genres }}
+        <!-- {{ mocking.genres[0].name }}, {{ mocking.genres[1].name }},
+        {{ mocking.genres[2].name }} -->
       </p>
 
       <h1>Production Countries</h1>
-      <p>{{ mocking.production_countries[0].name}}</p>
+      <p>{{ mocking.production_countries[0].name }}</p>
 
       <h1>Companies</h1>
       <p>
-        {{ mocking.production_companies[0].name }},
-        {{ mocking.production_companies[1].name }},
+        {{ companies }}
       </p>
 
       <h1>Score</h1>
@@ -33,7 +33,7 @@
 
 <script>
 import movieMock from "@/data/movie-mock";
-
+import { displayImage } from "@/helper/image.helper.js";
 export default {
   data() {
     return {
@@ -60,6 +60,23 @@ export default {
       // },
     };
   },
+  computed: {
+    genres() {
+      return this.mocking.genres
+        .map((obj) => {
+          return obj.name;
+        })
+        .join(", "); //เป็นการเอาไปคั่นเพื่อเอาelementอื่นไปค่อ
+    },
+    companies() {
+      return this.mocking.production_companies
+        .map((obj) => obj.name) //short hand
+        .join(", ");
+    },
+  },
+  methods: {
+    displayImage,
+  },
 };
 </script>
 
@@ -74,7 +91,7 @@ p {
   padding: 20px;
   font-weight: 400;
 }
-p{
+p {
   font-size: 20px;
 }
 img {
@@ -90,7 +107,7 @@ img {
     color: #363636;
     padding: 10px;
   }
-  p{
+  p {
     font-weight: 15px;
   }
   h1 {

@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <!-- corousel test -->
     <new-corou />
     <!-- foryou -->
@@ -11,12 +10,13 @@
         </div>
         <div class="d-flex flex-wrap justify-content-center">
           <div
-            v-for="item in 8"
+            v-for="item in trends.results"
             :key="`l-${item}`"
             class="col-12 col-sm-6 col-lg-3"
           >
-            <movie-box></movie-box>
+            <movie-box :poster="item.poster_path"></movie-box>
           </div>
+
         </div>
 
         <div class="d-grid gap-2"></div>
@@ -25,7 +25,6 @@
 
     <!-- rating -->
     <rate-list></rate-list>
-
   </div>
 </template>
 
@@ -34,9 +33,20 @@ import MovieBox from "@/components/common/MovieBox";
 import RateList from "@/components/common/RateList";
 import NewCorou from "@/components/common/NewCorou.vue";
 
+import { displayImage } from "@/helper/image.helper.js";
+import trendList from "@/data/trend-list.json";
+
 export default {
-  components: { MovieBox, RateList, NewCorou},
-  setup() {},
+  components: { MovieBox, RateList, NewCorou },
+
+  data() {
+    return {
+      trends: trendList,
+    };
+  },
+  methods: {
+    displayImage,
+  },
 };
 </script>
 
