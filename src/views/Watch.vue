@@ -3,6 +3,7 @@
     <div class="pic">
       <img :src="displayImage(mocking.backdrop_path)" alt="" />
     </div>
+    <p>{{ movieId }}</p>
     <div class="container">
       <h1>{{ mocking.original_title }}</h1>
       <p>{{ mocking.overview }}</p>
@@ -34,33 +35,17 @@
 <script>
 import movieMock from "@/data/movie-mock";
 import { displayImage } from "@/helper/image.helper.js";
+import axios from "axios";
 export default {
   data() {
     return {
       mocking: movieMock,
-      // movieInfo: {
-      //   title: "Percy Jackson",
-      //   intro: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-      //   consequatur nam vero quibusdam quos reprehenderit, maxime, hic delectus
-      //   repudiandae nesciunt possimus vitae quam ducimus, similique eaque sed
-      //   maiores blanditiis quidem atque natus porro aut. Distinctio quo veniam,
-      //   repudiandae facilis laborum beatae est ut voluptate corrupti debitis
-      //   unde, ducimus nemo quis similique. Ducimus adipisci perferendis
-      //   aspernatur itaque unde nostrum explicabo magnam nihil exercitationem
-      //   voluptatum repellat doloremque, magni eos eius, repudiandae quidem aut
-      //   provident voluptates, debitis dolore soluta beatae. Sequi ipsum eaque
-      //   quis rem hic voluptates iste laboriosam quibusdam, veniam consequatur
-      //   praesentium, cumque doloribus minus magni amet aperiam cum dignissimos
-      //   aspernatur? Atque.`,
-      //   detail: "Detail",
-      //   review: "Reviews",
-      //   score: "Score",
-      //   writer: "Writer",
-      //   director: "Director",
-      // },
     };
   },
   computed: {
+    movieId() {
+      return this.$route.params.movieId;
+    },
     genres() {
       return this.mocking.genres
         .map((obj) => {
@@ -73,6 +58,15 @@ export default {
         .map((obj) => obj.name) //short hand
         .join(", ");
     },
+  },
+  mounted() {
+    axios
+      .get(
+        "https://api.themoviedb.org/3/movie/337404?api_key=4c352710aeaea02fee5902eb8141ee71&language=en-US"
+      )
+      .then((response) => {
+        console.log(response);
+      });
   },
   methods: {
     displayImage,

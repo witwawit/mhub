@@ -28,13 +28,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <router-link to="/watch"><img src="~@/assets/img/1.jpeg" class="d-block w-100" alt="" /></router-link>
+        <router-link to="/watch/1"><img src="~@/assets/img/1.jpeg" class="d-block w-100" alt="" /></router-link>
       </div>
       <div class="carousel-item">
-        <router-link to="/watch"><img src="~@/assets/img/2.jpeg" class="d-block w-100" alt="" /></router-link>
+        <router-link to="/watch/2"><img src="~@/assets/img/2.jpeg" class="d-block w-100" alt="" /></router-link>
       </div>
       <div class="carousel-item">
-        <router-link to="/watch"><img src="~@/assets/img/3.jpeg" class="d-block w-100" alt="" /></router-link>
+        <router-link to="/watch/3"><img src="~@/assets/img/3.jpeg" class="d-block w-100" alt="" /></router-link>
       </div>
     </div>
     <button

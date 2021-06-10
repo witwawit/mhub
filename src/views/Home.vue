@@ -11,10 +11,10 @@
         <div class="d-flex flex-wrap justify-content-center">
           <div
             v-for="item in posterList"
-            :key="`l-${item}`"
+            :key="`l-${item.id}`"
             class="col-12 col-sm-6 col-lg-3"
           >
-            <movie-box :poster="item"></movie-box>
+            <movie-box :poster="item.poster_path" :movieId="item.id"></movie-box>
             <!-- <movie-box poster="/M7SUK85sKjaStg4TKhlAVyGlz3.jpg"></movie-box> -->
           </div>
         </div>
@@ -47,16 +47,16 @@ export default {
   computed: {
     posterList() {
       const filter = this.trends.results.filter((element, index) => index < 8);
-      const mapping = filter.map((element) => {
-        // console.log(element.poster_path, index);
-        return element.poster_path;
-      });
+      // const mapping = filter.map((element) => {
+      //   // console.log(element.poster_path, index);
+      //   return element.poster_path;
+      // });
 
       // const mapping2 = filter.map((element) => {
       //   return displayImage(element.poster_path);
       // });
       // console.log(mapping,mapping2);
-      return mapping;
+      return filter;
     },
   },
   methods: {

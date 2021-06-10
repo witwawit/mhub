@@ -1,6 +1,13 @@
 <template>
   <div class="movie-box">
-    <a href="#"><img :src="displayImage(poster)" alt="" /></a>
+    <router-link :to="{
+      name: 'watch',
+      params: {
+        movieId: movieId
+      }
+    }"
+      ><img :src="displayImage(poster)" alt=""
+    /></router-link>
   </div>
 </template>
 
@@ -10,6 +17,7 @@ import { displayImage } from "@/helper/image.helper";
 export default {
   props: {
     poster: { type: String, default: "" },
+    movieId: { type: Number, required: true },
   },
   methods: {
     displayImage,
