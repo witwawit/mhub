@@ -3,12 +3,22 @@
     <section>
       <div class="max-width">
         <div class="d-flex flex-wrap justify-content-center">
-          <h1>{{title}}</h1>
+          <h1>{{ title }}</h1>
         </div>
         <div class="eiei d-flex flex-wrap justify-content-center">
-          <div v-for="item in list" :key="`k-${item}`" class="col-12 col-lg-6">
-            <a href="" class="box2"></a>
-            <p>{{ item }}</p>
+          <div
+            v-for="item in movieList"
+            :key="`k-${item.id}`"
+            class="col-12 col-md-6 col-lg-3"
+          >
+            <router-link
+              :to="{ name: 'watch', params: { movieId: item.id } }"
+              class="box2"
+            >
+              <img :src="displayImage(item.poster_path)" />
+              <!-- image is in item.poster_path  -->
+            </router-link>
+            <p>{{ item.original_title }}</p>
           </div>
         </div>
       </div>
@@ -18,6 +28,7 @@
 
 <script>
 import movieMock from "@/data/movie-mock";
+import { displayImage } from "@/helper/image.helper.js";
 
 export default {
   props: {
@@ -25,10 +36,15 @@ export default {
       type: String,
       default: "Top Rates",
     },
+    movieList: {
+      type: Array,
+      default: () => [], //type =arr เพราะรับค่าหนังมาหลายค่า
+    },
   },
   data() {
     return {
       mocking: movieMock,
+
       list: [
         "Percy Jackson",
         "Pirates of the Carribbean",
@@ -40,6 +56,9 @@ export default {
         "Ready Player One",
       ],
     };
+  },
+  methods: {
+    displayImage,
   },
   components: {},
   setup() {},
@@ -75,6 +94,13 @@ h1 {
 p {
   margin: 20px;
   color: #fec926;
+}
+img {
+  /* max-width: 100%;
+  max-height: 100%; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media (max-width: 550px) {
   section {
