@@ -9,7 +9,7 @@
           <div
             v-for="item in movieList"
             :key="`k-${item.id}`"
-            class="col-12 col-md-6 col-lg-3"
+            class="col-12 col-md-6 col-lg-4"
           >
             <router-link
               :to="{ name: 'watch', params: { movieId: item.id } }"
@@ -44,17 +44,6 @@ export default {
   data() {
     return {
       mocking: movieMock,
-
-      list: [
-        "Percy Jackson",
-        "Pirates of the Carribbean",
-        "Avatar",
-        "KingsMan",
-        "Harry Potter",
-        "Star Wars",
-        "Kimetsu No Yaiba",
-        "Ready Player One",
-      ],
     };
   },
   methods: {

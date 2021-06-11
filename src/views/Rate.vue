@@ -24,7 +24,7 @@ export default {
         { key: "top_rated", text: "Top Rated" },
         { key: "now_playing", text: "Now Playing" },
         { key: "upcoming", text: "UpComing" },
-        { key: "popular", text: "Popular" },
+        { key: "popular", text: "Popular" }
       ],
       listMovie: [], //for movieList in RateTopic
     };

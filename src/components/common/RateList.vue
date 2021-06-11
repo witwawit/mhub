@@ -29,10 +29,10 @@ export default {
     return {
       // list: ["top rates", "most recent", "most view", "mostlike"],
       list: [
-        { query: "top", text: "Top Rates" },
-        { query: "recent", text: "Most Recent" },
-        { query: "view", text: "Most View" },
-        { query: "like", text: "Most Like" },
+        { query: "top_rated", text: "Top Rated" },
+        { query: "now_playing", text: "Now Playing" },
+        { query: "upcoming", text: "UpComing" },
+        { query: "popular", text: "Popular" }
       ],
     };
   },
